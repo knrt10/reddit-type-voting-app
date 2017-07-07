@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<form class="form-group jumbotron">
+ <div class="well">
+   <blockquote >Add a Link</blockquote>
+ <label for="title">Title:</label>
+ <input name="title" class="form-control" #newtitle>
+ </div>
+ <div class="well">
+<label for="link">Link:</label>
+<input name="link" class="form-control" #newlink><br>
+<button (click)="addArticle(newtitle,newlink)"class="btn btn-lg btn-success"> Submit link </button>
+ </div>
+
+</form>
+<blockquote>
+  <app-article
+ *ngFor="let article of sortedArticles()"
+ [article]="article">
+ </app-article>
+ </blockquote>

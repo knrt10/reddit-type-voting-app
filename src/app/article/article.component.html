@@ -1,0 +1,32 @@
+<div class="row   votes">
+
+   <div class="col-xs-2 col-md-2 text-center jumbotron ">
+
+  {{ article.votes }} <br>Points
+  </div>
+ <div class="col-md-9 col-xs-9 col-md-offset-1 col-xs-offset-1 jumbotron">
+<blockquote>
+   <a  href="http://{{ article.link }}" target="_blank">
+ {{ article.title }}
+<footer>  {{article.link}} </footer>
+ </a>
+
+ </blockquote>
+ <ul >
+ <li class="item">
+ <a href (click)="voteUp()" class="btn btn-small btn-primary">
+ <i class="glyphicon glyphicon-triangle-top"></i>
+ upvote
+ </a>
+ </li>
+ <li class="item">
+ <a href (click)="voteDown()" class="btn btn-small btn-danger">
+ <i class="glyphicon glyphicon-triangle-bottom"></i>
+ downvote
+ </a>
+ </li>
+ </ul>
+
+</div>
+
+ </div>
